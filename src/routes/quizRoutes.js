@@ -2,16 +2,20 @@ const quizRouter = require("express").Router();
 const {
   getAllQuestions,
   getQuestionByID,
-  createQuestion
+  createQuestion, 
+  deleteQuestionByID
 } = require("../controllers/quizController.js");
 
-//  /q - return stored questions
+// GET /q - return stored questions
 quizRouter.get("/", getAllQuestions);
 
-// /q/new - create new question
+// POST /q/new - create new question
 quizRouter.post("/new", createQuestion);
 
-//  /q/:id - return question by id
+//  GET /q/:id - return question by id
 quizRouter.get("/:id", getQuestionByID);
+
+// DELETE /q/:ID - delete question by id
+quizRouter.delete("/:id", deleteQuestionByID);
 
 module.exports = quizRouter;
