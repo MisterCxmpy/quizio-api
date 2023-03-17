@@ -18,7 +18,7 @@ const createQuestion = (req, res) => {
   if (typeof body.question != "string") {
     res.status(422).json({
       error: "incorrect input",
-      shape: {
+      correctShape: {
         question: "Who was the first president of the United States?",
         choices: [
           "George Washington",
@@ -35,4 +35,20 @@ const createQuestion = (req, res) => {
   }
 };
 
-module.exports = { getAllQuestions, getQuestionByID, createQuestion };
+const deleteQuestionByID = (req, res) => {
+  let { id } = req.params;
+  let q = Question.deleteOne(parseInt(id));
+
+  if (q) {
+    res.json(q);
+  } else {
+    res.json({ error: "question not found" });
+  }
+};
+
+module.exports = {
+  getAllQuestions,
+  getQuestionByID,
+  createQuestion,
+  deleteQuestionByID,
+};

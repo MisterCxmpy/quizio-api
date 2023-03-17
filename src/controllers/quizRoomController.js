@@ -9,18 +9,21 @@ const getAllQuestionRooms = (req, res) => {
 const getQuestionRoomByURL = (req, res) => {
   const room = QuestionRoom.findByURL(req.params.url);
 
-  if(room) {
+  if (room) {
     res.json(room);
   } else {
-    res.json({ error: 'room not found.' })
+    res.json({ error: "room not found." });
   }
-}
+};
 
 const createQuizRoom = (req, res) => {
   const { body } = req;
 
-  if (typeof body.questions != 'object' && typeof body.questions[0].question != 'string') {
-    res.json({ error: 'incorrect input' })
+  if (
+    typeof body.questions != "object" &&
+    typeof body.questions[0].question != "string"
+  ) {
+    res.json({ error: "incorrect input" });
   } else {
     let room = QuestionRoom.save(body);
 
@@ -28,4 +31,15 @@ const createQuizRoom = (req, res) => {
   }
 };
 
-module.exports = { createQuizRoom, getAllQuestionRooms, getQuestionRoomByURL };
+const deleteQuizRoomByID = (req, res) => {
+  let { id } = req.params;
+  let qr = QuestionRoom.deleteOne(parseInt(id));
+
+  if (qr) {
+    res.json(qr);
+  } else {
+    res.json({ error: "quiz room not found" });
+  }
+};
+
+module.exports = { createQuizRoom, getAllQuestionRooms, getQuestionRoomByURL, deleteQuizRoomByID };

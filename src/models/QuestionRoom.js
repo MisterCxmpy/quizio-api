@@ -38,6 +38,16 @@ class QuestionRoom {
     return qr;
   }
 
+  static deleteOne(id) {
+    let idx = questionRooms.findIndex((qr) => qr.id === id);
+
+    if (idx < 0) {
+      return { error: "question not found" };
+    } else {
+      return questionRooms.splice(idx, 1);
+    }
+  }
+
   generateUrl() {
     this.url = nanoid();
     return this.url;
