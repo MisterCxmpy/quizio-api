@@ -42,4 +42,16 @@ const deleteQuizRoomByID = (req, res) => {
   }
 };
 
-module.exports = { createQuizRoom, getAllQuestionRooms, getQuestionRoomByURL, deleteQuizRoomByID };
+const roomCount = () => {
+  let rooms = QuestionRoom.find();
+
+  return rooms.length;
+};
+
+module.exports = {
+  createQuizRoom,
+  getAllQuestionRooms,
+  getQuestionRoomByURL,
+  deleteQuizRoomByID,
+  roomCount,
+};

@@ -46,7 +46,14 @@ const deleteQuestionByID = (req, res) => {
   }
 };
 
+const questionCount = () => {
+  let questions = Question.find();
+
+  return questions.length;
+};
+
 module.exports = {
+  questionCount,
   getAllQuestions,
   getQuestionByID,
   createQuestion,
