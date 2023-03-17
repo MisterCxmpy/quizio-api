@@ -13,6 +13,12 @@ class QuestionRoom {
     return questionRooms;
   }
 
+  static findByURL(url) {
+    let room = questionRooms.find(r => r.url == url);
+
+    return room;
+  }
+
   static save(questions) {
     let qr = new QuestionRoom(questions);
 

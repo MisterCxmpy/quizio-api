@@ -6,6 +6,16 @@ const getAllQuestionRooms = (req, res) => {
   res.status(200).json(rooms);
 };
 
+const getQuestionRoomByURL = (req, res) => {
+  const room = QuestionRoom.findByURL(req.params.url);
+
+  if(room) {
+    res.json(room);
+  } else {
+    res.json({ error: 'room not found.' })
+  }
+}
+
 const createQuizRoom = (req, res) => {
   const { body } = req;
 
@@ -18,4 +28,4 @@ const createQuizRoom = (req, res) => {
   }
 };
 
-module.exports = { createQuizRoom, getAllQuestionRooms };
+module.exports = { createQuizRoom, getAllQuestionRooms, getQuestionRoomByURL };
