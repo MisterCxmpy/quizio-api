@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const quizRouter = require('./routes/quizRoutes');
+const roomRouter = require('./routes/roomRoutes');
 
 const app = express();
 
@@ -10,5 +11,6 @@ app.use(express.json());
 
 // routes
 app.use('/q', quizRouter);
+app.use('/r', roomRouter);
 
 module.exports = app;
