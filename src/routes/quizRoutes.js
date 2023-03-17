@@ -15,7 +15,7 @@ quizRouter.post("/new", createQuestion);
 //  GET /q/:id - return question by id
 quizRouter.get("/:id", getQuestionByID);
 
-// DELETE /q/:ID - delete question by id
+// DELETE /q/:id - delete question by id
 quizRouter.delete("/:id", deleteQuestionByID);
 
 module.exports = quizRouter;
