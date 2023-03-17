@@ -1,0 +1,206 @@
+[
+  {
+    "questionID": 1,
+    "question": "In which year did World War I begin?",
+    "choices": ["1914", "1916", "1918", "1920"],
+    "answer": "1914"
+  },
+  {
+    "questionID": 2,
+    "question": "Who was the first president of the United States?",
+    "choices": [
+      "George Washington",
+      "Thomas Jefferson",
+      "Abraham Lincoln",
+      "John F. Kennedy"
+    ],
+    "answer": "George Washington"
+  },
+  {
+    "questionID": 3,
+    "question": "Which country did Christopher Columbus sail for?",
+    "choices": ["Spain", "Portugal", "England", "France"],
+    "answer": "Spain"
+  },
+  {
+    "questionID": 4,
+    "question": "What was the name of the battle that marked the end of the Napoleonic Wars?",
+    "choices": [
+      "Battle of Waterloo",
+      "Battle of Trafalgar",
+      "Battle of Leipzig",
+      "Battle of Borodino"
+    ],
+    "answer": "Battle of Waterloo"
+  },
+  {
+    "questionID": 5,
+    "question": "Who wrote the Communist Manifesto?",
+    "choices": [
+      "Karl Marx",
+      "Friedrich Engels",
+      "Vladimir Lenin",
+      "Joseph Stalin"
+    ],
+    "answer": "Karl Marx"
+  },
+  {
+    "questionID": 6,
+    "question": "Which country was the first to launch a satellite into space?",
+    "choices": ["Soviet Union", "United States", "China", "France"],
+    "answer": "Soviet Union"
+  },
+  {
+    "questionID": 7,
+    "question": "Which U.S. president authorized the use of atomic bombs against Japan in World War II?",
+    "choices": [
+      "Harry S. Truman",
+      "Franklin D. Roosevelt",
+      "Dwight D. Eisenhower",
+      "John F. Kennedy"
+    ],
+    "answer": "Harry S. Truman"
+  },
+  {
+    "questionID": 8,
+    "question": "Who was the first woman to be elected Prime Minister of a country?",
+    "choices": [
+      "Sirimavo Bandaranaike",
+      "Indira Gandhi",
+      "Margaret Thatcher",
+      "Golda Meir"
+    ],
+    "answer": "Sirimavo Bandaranaike"
+  },
+  {
+    "questionID": 9,
+    "question": "Which country was the first to develop and use tanks in warfare?",
+    "choices": ["United Kingdom", "Germany", "France", "Russia"],
+    "answer": "United Kingdom"
+  },
+  {
+    "questionID": 10,
+    "question": "Which country was responsible for the construction of the Great Wall of China?",
+    "choices": ["China", "Mongolia", "Korea", "Japan"],
+    "answer": "China"
+  },
+  {
+    "questionID": 11,
+    "question": "Who wrote the novel 'War and Peace'?",
+    "choices": [
+      "Leo Tolstoy",
+      "Fyodor Dostoevsky",
+      "Anton Chekhov",
+      "Nikolai Gogol"
+    ],
+    "answer": "Leo Tolstoy"
+  },
+  {
+    "questionID": 12,
+    "question": "Which U.S. president is known for the quote 'Speak softly and carry a big stick'?",
+    "choices": [
+      "Theodore Roosevelt",
+      "Woodrow Wilson",
+      "William Howard Taft",
+      "Franklin D. Roosevelt"
+    ],
+    "answer": "Theodore Roosevelt"
+  },
+
+  {
+    "questionID": 13,
+    "question": "Which country was the first to declare independence from the Soviet Union?",
+    "choices": ["Estonia", "Latvia", "Lithuania", "Ukraine"],
+    "answer": "Lithuania"
+  },
+  {
+    "questionID": 14,
+    "question": "What was the name of the ship on which Charles Darwin made his famous voyage?",
+    "choices": ["HMS Beagle", "HMS Bounty", "HMS Victory", "HMS Endeavour"],
+    "answer": "HMS Beagle"
+  },
+  {
+    "questionID": 15,
+    "question": "Who was the first African American to win the Nobel Peace Prize?",
+    "choices": [
+      "Martin Luther King Jr.",
+      "Ralph Bunche",
+      "Nelson Mandela",
+      "Desmond Tutu"
+    ],
+    "answer": "Ralph Bunche"
+  },
+  {
+    "questionID": 16,
+    "question": "Who was the first woman to fly solo across the Atlantic?",
+    "choices": [
+      "Amelia Earhart",
+      "Bessie Coleman",
+      "Harriet Quimby",
+      "Katharine Wright"
+    ],
+    "answer": "Amelia Earhart"
+  },
+  {
+    "questionID": 17,
+    "question": "Who was the first emperor of Rome?",
+    "choices": ["Augustus", "Julius Caesar", "Tiberius", "Caligula"],
+    "answer": "Augustus"
+  },
+  {
+    "questionID": 18,
+    "question": "Which battle marked the beginning of the Norman Conquest of England?",
+    "choices": [
+      "Battle of Stamford Bridge",
+      "Battle of Hastings",
+      "Battle of Bannockburn",
+      "Battle of Agincourt"
+    ],
+    "answer": "Battle of Stamford Bridge"
+  },
+  {
+    "questionID": 19,
+    "question": "Who was the first person to circumnavigate the globe?",
+    "choices": [
+      "Ferdinand Magellan",
+      "Francis Drake",
+      "Christopher Columbus",
+      "Vasco da Gama"
+    ],
+    "answer": "Ferdinand Magellan"
+  },
+  {
+    "questionID": 20,
+    "question": "Who was the first African American to serve as President of the United States?",
+    "choices": ["Barack Obama", "Jesse Jackson", "Al Sharpton", "Colin Powell"],
+    "answer": "Barack Obama"
+  },
+  {
+    "questionID": 21,
+    "question": "Which country was responsible for the construction of the Colosseum?",
+    "choices": ["Rome", "Greece", "Egypt", "France"],
+    "answer": "Rome"
+  },
+  {
+    "questionID": 22,
+    "question": "What was the name of the treaty that ended World War I?",
+    "choices": [
+      "Treaty of Versailles",
+      "Treaty of Brest-Litovsk",
+      "Treaty of Trianon",
+      "Treaty of Saint-Germain-en-Laye"
+    ],
+    "answer": "Treaty of Versailles"
+  },
+  {
+    "questionID": 23,
+    "question": "Who was the first person to climb Mount Everest?",
+    "choices": [
+      "Edmund Hillary",
+      "Tenzing Norgay",
+      "Reinhold Messner",
+      "Junko Tabei"
+    ],
+    "answer": "Edmund Hillary"
+  }
+]
