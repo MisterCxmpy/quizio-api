@@ -14,7 +14,7 @@ class QuestionRoom {
   }
 
   static findByURL(url) {
-    let room = questionRooms.find(r => r.url == url);
+    let room = questionRooms.find((r) => r.url == url);
 
     return room;
   }
