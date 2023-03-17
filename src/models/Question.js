@@ -1,9 +1,9 @@
 const questions = require("../config/questions.json");
 
 class Question {
-  constructor(prompt, choices, answer) {
+  constructor(question, choices, answer) {
     this.questionID = undefined;
-    this.prompt = prompt;
+    this.question = question;
     this.choices = choices;
     this.answer = answer;
   }
@@ -32,6 +32,8 @@ class Question {
     q.questionID = maxID + 1;
 
     questions.push(q);
+
+    return q;
   }
 }
 
