@@ -1,4 +1,4 @@
-const { nanoid } = require('nanoid')
+const { nanoid } = require("nanoid");
 
 let questionRooms = [];
 
@@ -16,9 +16,13 @@ class QuestionRoom {
   static save(questions) {
     let qr = new QuestionRoom(questions);
 
-    // get the max id in the question room arr
-    let ids = questionRooms.map((qr) => qr.id);
-    let maxID = Math.max(...ids);
+    let maxID;
+    if (questionRooms.length == 0) {
+      maxID = 0;
+    } else {
+      let ids = questionRooms.map((qr) => qr.id);
+      maxID = Math.max(...ids);
+    }
 
     qr.id = maxID + 1;
     qr.generateUrl();

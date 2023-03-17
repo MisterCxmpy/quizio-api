@@ -4,7 +4,7 @@ const {
   getAllQuestionRooms,
 } = require("../controllers/quizRoomController.js");
 
-//  /r/new - create a new quiz room
+//  POST /r/new - create a new quiz room
 roomRouter.post("/new", createQuizRoom);
 
 //  /r/all - return the data associated to all quiz rooms -- TEST

@@ -9,7 +9,7 @@ const getAllQuestionRooms = (req, res) => {
 const createQuizRoom = (req, res) => {
   const { body } = req;
 
-  if (typeof body.questions != 'object') {
+  if (typeof body.questions != 'object' && typeof body.questions[0].question != 'string') {
     res.json({ error: 'incorrect input' })
   } else {
     let room = QuestionRoom.save(body);
