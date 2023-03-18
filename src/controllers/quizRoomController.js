@@ -17,17 +17,19 @@ const getQuestionRoomByURL = (req, res) => {
 };
 
 const createQuizRoom = (req, res) => {
-  const { body } = req;
+  const { body: questions } = req;
 
   if (
-    typeof body.questions != "object" &&
-    typeof body.questions[0].question != "string"
+    typeof questions != "object" &&
+    typeof questions[0].question != "string"
   ) {
     res.json({ error: "incorrect input" });
   } else {
-    let room = QuestionRoom.save(body);
+    const r = new QuestionRoom(questions.questions);
 
-    res.json(room);
+    r.save();
+
+    res.json(r);
   }
 };
 
