@@ -4,8 +4,8 @@ let questionRooms = [];
 
 class QuestionRoom {
   constructor(questions) {
-    this.id = undefined;
-    this.url = undefined;
+    this.id = null;
+    this.url = null;
     this.questions = questions;
   }
 
