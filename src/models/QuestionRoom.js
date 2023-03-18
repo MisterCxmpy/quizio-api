@@ -4,8 +4,8 @@ let questionRooms = [];
 
 class QuestionRoom {
   constructor(questions) {
-    this.id = undefined;
-    this.url = undefined;
+    this.id = null;
+    this.url = null;
     this.questions = questions;
   }
 
@@ -19,23 +19,11 @@ class QuestionRoom {
     return room;
   }
 
-  static save(questions) {
-    let qr = new QuestionRoom(questions);
+  save() {
+    this.id = nanoid(4);
+    this.generateUrl();
 
-    let maxID;
-    if (questionRooms.length == 0) {
-      maxID = 0;
-    } else {
-      let ids = questionRooms.map((qr) => qr.id);
-      maxID = Math.max(...ids);
-    }
-
-    qr.id = maxID + 1;
-    qr.generateUrl();
-
-    questionRooms.push(qr);
-
-    return qr;
+    questionRooms.push(this);
   }
 
   static deleteOne(id) {

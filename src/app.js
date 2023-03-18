@@ -5,6 +5,7 @@ const roomRouter = require("./routes/roomRoutes");
 
 const { questionCount } = require("./controllers/quizController.js");
 const { roomCount } = require("./controllers/quizRoomController");
+const authRouter = require("./routes/authRoutes");
 
 const app = express();
 
@@ -20,7 +21,10 @@ app.get("/", (req, res) => {
   res.status(200).json({ questions: qCount, rooms: rCount });
 });
 
+// somewhat debating weather the questions should be stored seperately or just in the quiz rooms
 app.use("/q", quizRouter);
 app.use("/r", roomRouter);
+
+app.use("/auth", authRouter);
 
 module.exports = app;
