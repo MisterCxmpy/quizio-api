@@ -60,9 +60,8 @@ const signIn = async (req, res) => {
 };
 
 const logOut = (req, res) => {
-  const { body } = req;
-
-  res.json({ status: "WIP" });
+  res.cookie('jwt', '',{ maxAge: 1 })
+  res.json({ status: "logged out" });
 };
 
 module.exports = { signIn, signUp, logOut };

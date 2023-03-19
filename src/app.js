@@ -8,6 +8,7 @@ const authRouter = require("./routes/authRoutes");
 
 const { questionCount } = require("./controllers/quizController.js");
 const { roomCount } = require("./controllers/quizRoomController");
+const requireAuth = require("./middleware/authMiddleware");
 
 const app = express();
 
@@ -25,7 +26,7 @@ app.get("/", (req, res) => {
 });
 
 // somewhat debating weather the questions should be stored seperately or just in the quiz rooms
-app.use("/q", quizRouter);
+app.use("/q", requireAuth, quizRouter);
 app.use("/r", roomRouter);
 
 app.use("/auth", authRouter);
