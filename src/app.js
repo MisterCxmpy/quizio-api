@@ -27,7 +27,7 @@ app.get("/", (req, res) => {
 
 // somewhat debating weather the questions should be stored seperately or just in the quiz rooms
 app.use("/q", requireAuth, quizRouter);
-app.use("/r", roomRouter);
+app.use("/r", requireAuth, roomRouter);
 
 app.use("/auth", authRouter);
 
