@@ -10,7 +10,8 @@ const getQuestionRoomByURL = (req, res) => {
   const room = QuestionRoom.findByURL(req.params.url);
 
   if (room) {
-    res.json(room);
+    q = room.questions;
+    res.json({ questionCount: q.length, questions: q });
   } else {
     res.json({ error: "room not found." });
   }

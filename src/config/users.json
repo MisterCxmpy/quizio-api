@@ -1,14 +1,23 @@
 [
   {
+    "userID": "Sbx9k",
     "email": "admin@gmail.com",
     "username": "test_admin",
-    "password": "admin",
-    "role": "admin"
+    "password": "$2b$10$SWpqogG36ZTJRxQGy4jnk.PBV1y.q5prbh4UKiuXO72ltCoh.Ys0K",
+    "role": "user"
   },
   {
+    "userID": "P_JNa",
     "email": "test@gmail.com",
     "username": "test_usr",
-    "password": "test123",
+    "password": "$2b$10$mFOrRzrPGbr4HqmFtU7wDu9q9cZGW2vd/ckXn/2CvrOWpKt7Z2eeS",
+    "role": "user"
+  },
+  {
+    "userID": "zV4rr",
+    "email": "noclue@gmail.com",
+    "username": "test_usr",
+    "password": "$2b$10$nq63lTGe.wl0Hrv8K4xxkOZRR2St/etOtc5g3Ec.2d4t2cfQsdtBq",
     "role": "user"
   }
 ]
