@@ -48,7 +48,8 @@ class User {
   }
 
   save() {
-    if (users.find((u) => u.username === this.username).length) {
+    let usr = users.find((u) => u.username === this.username)
+    if (usr) {
       throw new Error("username already exists");
     }
 

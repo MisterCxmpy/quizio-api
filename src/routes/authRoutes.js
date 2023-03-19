@@ -8,7 +8,7 @@ authRouter.post("/signup", signUp);
 // POST /auth/login - sign in on post request
 authRouter.post("/login", signIn);
 
-// GET /auth/logout - WORK IN PROGRESS https://www.youtube.com/watch?v=muhJTRQ7WMk&list=PL4cUxeGkcC9iqqESP8335DA5cRFp8loyp&index=2
+// GET /auth/logout - clear auth jwt token of user
 authRouter.get("/logout", logOut);
 
 module.exports = authRouter;

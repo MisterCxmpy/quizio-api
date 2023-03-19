@@ -26,4 +26,4 @@ create questions and quiz rooms based on said questions
 |--------------|-------------|
 | POST /auth/login {user details in body} | login to existing account |
 | POST /auth/signup {user details in body} | create a user |
-| GET /auth/logout | log out of account - WIP |
+| GET /auth/logout | log out of account |
