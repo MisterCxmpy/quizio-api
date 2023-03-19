@@ -29,6 +29,10 @@ class User {
     return user;
   }
 
+  static find() {
+    return users;
+  }
+
   static async hashPassword(password) {
     const salt = await bcrypt.genSalt();
 
