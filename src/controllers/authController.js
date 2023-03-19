@@ -65,4 +65,10 @@ const logOut = (req, res) => {
   res.json({ status: "logged out" });
 };
 
-module.exports = { signIn, signUp, logOut };
+const showUsers = (req, res) => {
+  const users = User.find();
+
+  res.status(200).json(users);
+}
+
+module.exports = { signIn, signUp, logOut, showUsers };
