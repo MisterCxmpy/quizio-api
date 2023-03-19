@@ -29,7 +29,7 @@ const signUp = async (req, res) => {
 
     return res.status(201).json({ ...usr, password: null });
   } catch (error) {
-    return res.status(400).json({ error });
+    return res.status(400).json({ error: error.message });
   }
 };
 
@@ -41,7 +41,8 @@ const signIn = async (req, res) => {
   // look for user
   let user = User.findByUsername(body.username);
 
-  if (user) { // if user exists
+  if (user) {
+    // if user exists
     // compare the password to the body.input
     let valid = await User.comparePassword(body.password, user.password);
 
@@ -60,7 +61,7 @@ const signIn = async (req, res) => {
 };
 
 const logOut = (req, res) => {
-  res.cookie('jwt', '',{ maxAge: 1 })
+  res.cookie("jwt", "", { maxAge: 1 });
   res.json({ status: "logged out" });
 };
 
