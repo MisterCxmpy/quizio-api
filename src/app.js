@@ -1,12 +1,13 @@
 const express = require("express");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
+
 const quizRouter = require("./routes/quizRoutes");
 const roomRouter = require("./routes/roomRoutes");
+const authRouter = require("./routes/authRoutes");
 
 const { questionCount } = require("./controllers/quizController.js");
 const { roomCount } = require("./controllers/quizRoomController");
-const authRouter = require("./routes/authRoutes");
 
 const app = express();
 
