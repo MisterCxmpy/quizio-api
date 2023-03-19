@@ -1,5 +1,6 @@
 const users = require("../config/users.json");
-const { nanoid } = require('nanoid')
+const { nanoid } = require("nanoid");
+const bcrypt = require("bcrypt");
 
 class User {
   constructor(email, username, password, role) {
@@ -26,6 +27,24 @@ class User {
     let user = users.find((u) => u.username == username);
 
     return user;
+  }
+
+  static async hashPassword(password) {
+    const salt = await bcrypt.genSalt();
+
+    try {
+      let hashed = bcrypt.hash(password, salt);
+      return hashed;
+    } catch (error) {
+      console.log(error);
+      return error;
+    }
+  }
+
+  static async comparePassword(password, hashedPw) {
+    let valid = await bcrypt.compare(password, hashedPw);
+
+    return valid;
   }
 
   save() {

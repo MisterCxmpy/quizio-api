@@ -1,6 +1,6 @@
 const User = require("../models/User.js");
 
-const signUp = (req, res) => {
+const signUp = async (req, res) => {
   const { body } = req;
   if (!body.password || !body.username || !body.email) {
     return res.json({ error: "incorrect input" });
@@ -9,15 +9,20 @@ const signUp = (req, res) => {
   try {
     const usr = new User(body.email, body.username, body.password, "user");
 
+    let hashed = await User.hashPassword(usr.password);
+
+    usr.password = hashed;
     usr.save();
 
-    return res.status(200).json({ ...usr, password: null });
+    console.log("Cookies: ", req.cookies); // verifiying if cookie-parser is working
+
+    return res.status(200).json({ ...usr });
   } catch (error) {
     return res.json({ error });
   }
 };
 
-const signIn = (req, res) => {
+const signIn = async (req, res) => {
   const { body } = req;
   if (!body.password || !body.username) {
     return res.json({ error: "incorrect input" });
@@ -26,7 +31,9 @@ const signIn = (req, res) => {
   let user = User.findByUsername(body.username);
 
   if (user) {
-    if (user.password === body.password) {
+    let valid = await User.comparePassword(body.password, user.password);
+
+    if (valid) {
       return res.status(200).json({ ...user, password: null });
     } else {
       return res.status(401).json({ error: "incorrect credentials" });
